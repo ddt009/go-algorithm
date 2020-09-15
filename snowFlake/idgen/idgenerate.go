@@ -64,17 +64,11 @@ func (w *Worker)nextID() (uint64,error) {
 	}
 
 	if w.LastStamp == timeStamp{
-		// 这其实和 <==>
-		// w.sequence++
-		// if w.sequence++ > maxSequence  等价
+
 		w.Sequence = (w.Sequence + 1) & maxSequence
 
 		if w.Sequence == 0 {
-			// 之前使用 if, 只是没想到 GO 可以在一毫秒以内能生成到最大的 Sequence, 那样就会导致很多重复的
-			// 这个地方使用 for 来等待下一毫秒
 			for timeStamp <= w.LastStamp {
-				//i++
-				//fmt.Println(i)
 				timeStamp = w.getMilliSeconds()
 			}
 		}

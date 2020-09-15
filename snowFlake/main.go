@@ -36,6 +36,7 @@ func main()  {
 		// 如果 map 中存在为 id 的 key, 说明生成的 snowflake ID 有重复
 		_, ok := m[id]
 		if ok {
+			fmt.Printf("repeat id %d\n",id)
 			return
 		}
 		// 将 id 作为 key 存入 map

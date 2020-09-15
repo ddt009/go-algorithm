@@ -1,19 +1,9 @@
 ## 雪花算法
 
+`author：asong`   `公众号：Golang梦工厂`
+
 > 简介：唯一ID算法`SnowFlake`是Twitter公司提出来的算法。非常广泛的应用在各种业务系统里。这一篇我们我们学习一下原生的`SnowFlake`算法，
 > 并用`go`实现一下。
-
-小插曲：
-
-> `author：asong`   `公众号：Golang梦工厂`
->
-> 欢迎关注公众号，更多优质文章第一时间观看。
->
-> 获取2020GIN最新官方中文文档：后台回复：gin
->
-> 获取微服务架构设计模式这本书的PDF，后台回复：微服务
-
-![](https://song-oss.oss-cn-beijing.aliyuncs.com/wx/qrcode_for_gh_efed4775ba73_258.jpg)
 
 
 ### SnowFlake
