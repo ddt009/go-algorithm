@@ -43,6 +43,6 @@ func main()  {
 		m[id] = i
 	}
 	// 成功生成 snowflake ID
-	fmt.Println("All", count, "snowflake ID Get successed!")
+	fmt.Println("All", len(m), "snowflake ID Get successed!")
 
 }
