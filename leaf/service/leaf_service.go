@@ -40,6 +40,7 @@ func (l *LeafService) GetID(ctx context.Context, bizTag string) (uint64, error) 
 		// 不存在初始化一下
 		seqs, err = l.InitCache(ctx, bizTag)
 		if err != nil {
+			l.mutex.Unlock()
 			return 0, err
 		}
 	}
